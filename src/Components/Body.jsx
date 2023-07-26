@@ -1,15 +1,11 @@
-import FilterButtons from "./FilterButtons";
 import Sidebar from "./Sidebar";
-import VideoCardContainer from "./VideoCardContainer";
+import { Outlet } from "react-router-dom";
 
 const Body = () => {
   return (
-    <div className="flex justify-between mt-[76px] mt">
+    <div className="flex  flex-col mt-[62px] md:mt-[70px]  ">
       <Sidebar />
-      <div className="ml-52 ">
-        <FilterButtons />
-        <VideoCardContainer />
-      </div>
+      <Outlet />
     </div>
   );
 };

@@ -1,5 +1,7 @@
 import { BsDot } from "react-icons/bs";
 import { MdVerified } from "react-icons/md";
+import { useSelector } from "react-redux";
+import store from "../Utils/store";
 
 const VideoCard = ({
   title,
@@ -22,26 +24,34 @@ const VideoCard = ({
     }
     return shortNum + suffixes[suffixNum];
   };
+  const isSideBarOpen = useSelector((store) => store.app.isSideBarOpen);
 
   return (
-    <div className="py-2 mb-1 hover:scale-105 transition duration-150 shadow-[rgba(7,_65,_210,_0.1)_0px_9px_30px]">
+    <div
+      className={
+        "py-2 mb-1 w-[354px] max-w-sm shadow-[rgba(7,_65,_210,_0.1)_0px_9px_30px] cursor-pointer" +
+        (isSideBarOpen
+          ? " sm: md:w-72 lg:w-80"
+          : " sm:w-96 md:w-[370px] lg:w-[290px]")
+      }
+    >
       <div className="overflow-hidden">
         <img
-          className="rounded  w-full lg:w-80 bg-cover "
+          className="rounded  w-full lg:w-80  "
           src={thumbnail}
           alt="thumbnail"
         />
       </div>
 
-      <div className="mt-2">
-        <p className="font-semibold text-lg truncate" title={title}>
+      <div className="mt-2 ">
+        <p className="font-semibold text-base truncate" title={title}>
           {title}
         </p>
-        <div className="flex items-center gap-1">
-          <span className="font-medium text-lg">{channelTitle}</span>
+        <div className="flex items-center  gap-1">
+          <span className="font-medium text-base">{channelTitle}</span>
           <MdVerified />
         </div>
-        <div className="flex items-center gap-1 mt-1 ">
+        <div className="flex items-center gap-1 mt-1 text-base">
           <span className="font-medium ">
             {formatNumberToYouTubeStyle(viewCount)} views
           </span>
