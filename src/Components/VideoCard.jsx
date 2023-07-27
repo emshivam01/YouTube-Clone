@@ -29,7 +29,7 @@ const VideoCard = ({
   return (
     <div
       className={
-        "py-2 mb-1 w-[354px] max-w-sm shadow-[rgba(7,_65,_210,_0.1)_0px_9px_30px] cursor-pointer" +
+        "py-2 mb-1 w-full  shadow-[rgba(7,_65,_210,_0.1)_0px_9px_30px] cursor-pointer " +
         (isSideBarOpen
           ? " sm: md:w-72 lg:w-80"
           : " sm:w-96 md:w-[370px] lg:w-[290px]")
