@@ -29,10 +29,10 @@ const VideoCardContainer = () => {
   };
 
   return (
-    <div className="  md:px-4 mt-12  ">
+    <div className="sm:px-2  md:px-2 mt-12  ">
       <div
         className={`p-2 grid grid-cols-1 sm:grid-cols-2 gap-5 ${
-          isSideBarOpen ? "lg:grid-cols-5" : "lg:grid-cols-6"
+          isSideBarOpen ? "lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5" : "lg:grid-cols-4 2xl:grid-cols-6"
         }`}
       >
         {loading
