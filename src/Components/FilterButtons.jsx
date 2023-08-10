@@ -78,7 +78,7 @@ const FilterButtons = () => {
     "Nature",
   ];
   return (
-    <div className="fixed z-10 bg-white md:w-[1802px] max-w-full py-2 pb-3   px-4 flex items-center gap-2 rounded overflow-hidden overflow-x-scroll no-scrollbar  select-none">
+    <div className="fixed  bg-white md:w-[1802px] max-w-full py-2 pb-3   px-4 flex items-center gap-2 rounded overflow-hidden overflow-x-scroll no-scrollbar  select-none">
       {filters.map((filter, index) => (
         <Button title={filter} key={index} />
       ))}

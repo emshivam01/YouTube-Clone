@@ -64,7 +64,7 @@ const WatchVideo = () => {
         <p className="font-semibold text-lg ">{videoDetails?.snippet?.title}</p>
 
         <div className="flex items-center gap-1  text-base">
-          <span className="font-medium ">
+          <span className="font-normal">
             {`${formatNumberToYouTubeStyle(
               videoDetails?.statistics?.viewCount
             )} 
@@ -75,9 +75,14 @@ const WatchVideo = () => {
         </div>
 
         <div className="mt-1">
-          <span className="font-semibold text-base">
+          <span className="font-medium text-base">
             {videoDetails?.snippet?.channelTitle}
           </span>
+        </div>
+
+        <div className="bg-gray-300 h-20 w-full mt-4 rounded shadow-md">
+        
+        
         </div>
       </div>
     </div>
